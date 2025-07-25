@@ -23,8 +23,9 @@ body {
 }
 
 .logo {
-    padding-left: 150px;
-  width: 300px;
+  padding-left: 0;
+  padding-top: 30px;
+  width: 100px;
 }
 
 .nav-links a {
@@ -94,12 +95,13 @@ body {
     font-size: 14px;
   }
 
-  .nav-links a:not(.cart) {
-    display: none; /* khali cart dekhabe */
+  .nav-links a:not(.cart ,.logo) {
+    display: none; /* khali cart and logo dekhabe */
   }
 
   .logo {
-    width: 100px;
+    padding-left: 0;
+    width: 80px;
   }
 
   .hero {
@@ -513,7 +515,7 @@ body {
 /* Subscribe Section */
 .subscribe-section {
   position: relative; 
-  padding: 80px 0; /* Vertical padding */
+  padding: 80px 0; 
   text-align: center;
   color: white; 
   overflow: hidden; 
@@ -612,5 +614,142 @@ body {
 
   .subscribe-btn {
     padding: 12px 25px;
+  }
+}
+
+/*footer section */
+
+footer {
+  background-color: #f8fbff;
+  padding: 60px 150px;
+  color: #333;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  
+}
+
+.footer-about {
+  flex: 1;
+  padding-top: 50px;
+  max-width: 300px;
+
+}
+
+.footer-logo {
+  width: 120px;
+  margin-bottom: 15px;
+}
+
+.footer-about p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #666;
+}
+
+.footer-links {
+  display: flex;
+  gap: 80px;
+}
+
+.footer-links-column h3 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.footer-links-column ul {
+  list-style: none;
+  padding: 40px 10px;
+}
+
+.footer-links-column li {
+  margin-bottom: 30px;
+}
+
+.footer-links-column a {
+  text-decoration: none;
+  color: #666;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.footer-links-column a:hover {
+  color: #f15a24;
+}
+
+.footer-social {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.social-icon {
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.social-icon:hover {
+  transform: translateY(-3px);
+}
+
+/* footer responsive */
+
+@media (max-width: 576px) {
+  footer {
+    padding: 30px 20px;
+  }
+  .footer-content {
+    flex-direction: column;
+    align-items: left;
+    text-align: left;
+    gap: 30px;
+  }
+
+  .footer-about {
+    max-width: 100%;
+    padding-left: 10px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 0px;
+    width: 100%;
+    align-items: left;
+  }
+
+  .footer-links-column {
+    width: 100%;
+    align-content: left;
+  }
+
+  .footer-links-column ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: left;
+    gap: 80px;
+  }
+
+  .footer-links-column li {
+    margin-bottom: 0;
+  }
+
+  .footer-social {
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .social-icon {
+    width: 30px;
+    height: 30px;
   }
 }

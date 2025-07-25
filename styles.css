@@ -597,8 +597,8 @@ body {
   }
 
   .subscribe-form {
-    flex-direction: column;
-    gap: 15px;
+ 
+    gap: 0px;
     padding: 0 20px;
   }
 
